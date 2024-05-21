@@ -19,7 +19,7 @@
                 <li><a href="#services">Servicii</a></li>
                 <li><a href="#gallery">Galerie</a></li>
                 <li><a href="#">Program</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +30,7 @@
             <a href="#services">Servicii</a>
             <a href="#gallery">Galerie</a>
             <a href="#">Program</a>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
         </div>
     </div>
     <section class="hero">
@@ -52,7 +52,7 @@
         <p>Redefinim frumusețea prin detalii fine și servicii de înaltă calitate, pentru a te ajuta să te simți mereu specială și încrezătoare.</p>
     </section>
     <section id="services" class="services">
-        <h1>Servicii</h1>
+        <h1 class="section-title">Servicii</h1>
         <div class="services-container">
             <div class="service">
                 <img src="coafura.jpg" alt="Coafor">
@@ -107,13 +107,13 @@
         </div>
     </section>
     <section id="gallery" class="gallery">
-        <h1>Galerie</h1>
+        <h1 class="section-title">Galerie</h1>
         <div class="gallery-container">
             <div class="gallery-item">
                 <img src="galerie1.jpg" alt="Gallery Image 1">
             </div>
             <div class="gallery-item">
-                <video controls>
+                <video controls poster="poster10.jpg">
                     <source src="galerie10.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -128,7 +128,7 @@
                 <img src="galerie8.jpg" alt="Gallery Image 2">
             </div>
             <div class="gallery-item">
-                <video controls>
+                <video controls poster="poster12.jpg">
                     <source src="galerie12.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -138,7 +138,7 @@
             </div>
            
             <div class="gallery-item">
-                <video controls>
+                <video controls poster="poster3.jpg">
                     <source src="galerie3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -147,31 +147,31 @@
                 <img src="galerie6.jpg" alt="Gallery Image 4">
             </div>
             <div class="gallery-item">
-                <video controls>
+                <video controls poster="poster9.jpg">
                     <source src="galerie9.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             
             <div class="gallery-item">
-                <video controls>
+                <video controls poster="poster11.jpg">
                     <source src="galerie11.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             
             <div class="gallery-item">
-                <video controls>
+                <video controls poster="poster13.jpg">
                     <source src="galerie13.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="contact-content">
             <h2>Te așteptăm pe la noi</h2>
-            <h1>Contactează-ne</h1>
+            <h1 class="section-title">Contactează-ne</h1>
             <p>Pentru mai multe informații privind Brig's Studio sau serviciile oferite de acestea,</p>
             <p>vă rugăm să ne contactați telefonic la numărul de mai jos sau să vizitați pagina noastră de Facebook.</p>
             <div class="contact-info">
@@ -187,9 +187,55 @@
     </section>
     
     
-    <footer>
-        <p>© 2024 Brig's Studio Timișoara. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="logo.png" alt="Brig's Studio Logo">
+            </div>
+            <div class="footer-section">
+                <h3>Servicii</h3>
+                <ul>
+                    <li>Coafor</li>
+                    <li>Manichiură și pedichiură</li>
+                    <li>Tratament facial</li>
+                    <li>Machiaj</li>
+                    <li>Epilat</li>
+                    <li>Pensat</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resurse</h3>
+                <ul>
+                    <li><a href="">Termeni și condiții</a></li>
+                    <li><a href="">Politica de confidențialitate</a></li>
+                    <li><a href="">Politica de Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="contact-box">
+                    <div class="contact-number"><a href="tel:+40742482192">+40 742 482 192</a></div>
+                    <div class="facebook-link">
+                        <a href="https://www.facebook.com/BrigsStudio" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Brig's Studio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Copyright - 2024 Toate drepturile rezervate</p>
+            <div class="footer-links">
+                <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage">
+                    <img src="anpc-sol-1.png" alt="">
+                </a>
+                <a href="https://anpc.ro">
+                    <img src="anpc.jpg" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>
     </footer>
+    
     <script>
         function toggleMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
