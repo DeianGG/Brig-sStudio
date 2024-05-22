@@ -13,15 +13,22 @@
         <div class="logo">
             <img src="logo.png" alt="Bliss Beauty Salon Logo">
         </div>
-        <nav>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            <ul id="nav-menu">
-                <li><a href="#services">Servicii</a></li>
-                <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="svg-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0,0 C5,35 95,65 100,100 L100,0 Z" fill="#d4af37" />
+            </svg>
+        </div>
+        <div class="header-second">
+            <nav>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="#services">Servicii</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#">Program</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>    
+        </div>
     </header>
     <div id="mobile-menu" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
@@ -47,7 +54,7 @@
     
     
     <section class="about">
-        <h2>Bine ați venit la</h2>
+        <h2 class="metallic-gold">Bine ați venit la</h2>
         <h1>Brig's Studio Timișoara</h1>
         <p>Redefinim frumusețea prin detalii fine și servicii de înaltă calitate, pentru a te ajuta să te simți mereu specială și încrezătoare.</p>
         <p>La Brig's Studio Timișoara, misiunea noastră este de a redefini standardele frumuseții și de a oferi o experiență unică fiecărui client. Suntem dedicați să aducem cele mai noi și inovatoare tehnici de înfrumusețare, utilizând produse de înaltă calitate și echipamente de ultimă generație.</p>
@@ -58,6 +65,7 @@
     
     <section id="services" class="services">
         <h1 class="section-title">Servicii</h1>
+        
         <div class="services-container">
             <div class="service">
                 <img src="coafura.jpg" alt="Coafor">
@@ -83,7 +91,7 @@
             </div>
             <div class="service">
                 <img src="tratament.jpg" alt="Tratament Facial">
-                <div class="service-content">
+                <div id="randul1" class="service-content">
                     <h3>Tratament Facial</h3>
                     <p>Revitalizează-ți pielea cu tratamente faciale personalizate, adaptate nevoilor tale.</p>
                 </div>
@@ -97,7 +105,7 @@
             </div>
             <div class="service">
                 <img src="waxing.jpg" alt="Epilat">
-                <div class="service-content">
+                <div id="randul2" class="service-content">
                     <h3>Epilat</h3>
                     <p>Servicii de epilare eficientă pentru o piele fină și catifelată.</p>
                 </div>

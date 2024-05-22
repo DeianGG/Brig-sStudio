@@ -4,6 +4,48 @@
     box-sizing: border-box;
 }
 
+.metallic-gold {
+    background: linear-gradient(135deg, #ffd700, #ffec8b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    animation: shimmer 2s infinite;
+    display: inline-block;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.metallic-gold-bg {
+    background: linear-gradient(135deg, #ffd700, #ffec8b);
+    background-size: 200% 200%;
+    animation: bg-shimmer 3s linear infinite;
+    color: #fff; /* Text color for contrast */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes bg-shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 body {
     font-family: 'Playfair Display', serif;
     color: #333;
@@ -14,20 +56,46 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
     background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    height: 150px;
 }
 
 .logo img {
     width: 120px;
+    margin-left: 20px;
+}
+
+.svg-divider {
+    position: absolute;
+    right: 39.95%;
+    height: 100%;
+    width: 100px; /* Adjust width as needed */
+}
+
+.svg-divider svg {
+    height: 100%;
+    width: 100%;
+}
+
+.header-second {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%; /* Adjust width based on logo and divider width */
+    background-color: #d4af37;
+    height: 100%;
 }
 
 nav {
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
     position: relative;
+    width: 100%;
 }
 
 nav .menu-toggle {
@@ -36,12 +104,15 @@ nav .menu-toggle {
     border: none;
     font-size: 2.5rem;
     cursor: pointer;
-    color: #d4af37; /* Gold color */
+    color: #ffffff; /* Gold color */
     margin-right: 15px;
 }
 
 nav ul {
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     list-style: none;
 }
 
@@ -51,9 +122,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #d4af37; /* Gold color */
+    color: #ffffff; /* Gold color */
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+}
+nav ul li a:hover{
+    color:#fffbee
 }
 /* Section Title Underline Effect */
 .section-title {
@@ -141,7 +215,7 @@ nav ul li a {
 
 
 .about {
-    padding: 50px 20px 0px 20px;
+    padding: 50px 10% 0px 10%;
     text-align: center;
 }
 
@@ -163,22 +237,39 @@ nav ul li a {
 
 
 .services {
+    position: relative;
     padding: 50px 20px;
     text-align: center;
+    background-color: #fff; /* Background color for the entire section */
 }
 
+.services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 C35,5 65,95 0,100 L0,0 Z" fill="%23f8f8f8" /></svg>') no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
 .services h1 {
+    z-index: 1;
     margin-bottom: 40px;
     font-size: 2.5rem;
 }
 
 .services-container {
+    z-index: 1;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
 }
 
 .service {
+    z-index: 1;
     height: fit-content;
     background: #f0f0f0;
     padding: 20px;
@@ -230,6 +321,12 @@ nav ul li a {
     font-weight: 600;
     font-size: 1.1rem;
     margin-top: 5px;
+}
+#randul1 p{
+    margin-bottom: 75px;
+}
+#randul2 p{
+    margin-bottom: 25px;
 }
 .gallery {
     padding: 50px 20px;
@@ -580,9 +677,14 @@ nav ul li a {
     }
 
     .service {
-        height: auto;
+        height: 650px;
         width: 95%;
     }
+
+    .service img{
+        height: 60%;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
