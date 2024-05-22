@@ -4,47 +4,6 @@
     box-sizing: border-box;
 }
 
-.metallic-gold {
-    background: linear-gradient(135deg, #ffd700, #ffec8b);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    animation: shimmer 2s infinite;
-    display: inline-block;
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -1000px 0;
-    }
-    100% {
-        background-position: 1000px 0;
-    }
-}
-
-.metallic-gold-bg {
-    background: linear-gradient(135deg, #ffd700, #ffec8b);
-    background-size: 200% 200%;
-    animation: bg-shimmer 3s linear infinite;
-    color: #fff; /* Text color for contrast */
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-@keyframes bg-shimmer {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
 
 body {
     font-family: 'Playfair Display', serif;
@@ -287,7 +246,7 @@ nav ul li a:hover{
     object-fit: cover;
 }
 .service-content{
-    height: 20%;
+    height: 190px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -322,63 +281,102 @@ nav ul li a:hover{
     font-size: 1.1rem;
     margin-top: 5px;
 }
-#randul1 p{
-    margin-bottom: 75px;
-}
-#randul2 p{
-    margin-bottom: 25px;
-}
+
 .gallery {
     padding: 50px 20px;
     text-align: center;
     background-color: #f8f8f8;
 }
 
-.gallery h1 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
 
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item {
+.swiper-wrapper {
+    margin-top: 30px;
     display: flex;
-    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
     justify-content: center;
+    align-items: center;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.gallery-item:hover {
-    transform: scale(1.05);
+    height: 600px!important; /* Fixed height for all slides */
 }
 
-.gallery-item img,
-.gallery-item video {
+.swiper-slide img,
+.swiper-slide video {
     width: 100%;
-    height: 100%;
+    height: 100%!important;
     display: block;
-    object-fit: cover;
+    object-fit: cover; /* Ensures images/videos cover the entire slide without stretching */
 }
 
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/* Adjust Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #d4af37!important; /* Gold color */
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%; /* Center vertically within the Swiper container */
+    z-index: 10; /* Ensure they are above other elements */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+/* Adjust Swiper Pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px; /* Position at the bottom of the Swiper container */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10; /* Ensure it is above other elements */
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+}
+
+.swiper-pagination-bullet-active {
+    background: #d4af37!important; /* Gold color */
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .gallery-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    .swiper-slide {
+        height: 250px;
+    }
+    .swiper-pagination{
+        display: none!important;
     }
 }
-
-@media (max-width: 480px) {
-    .gallery-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 .contact {
     background-color: #fff;
@@ -649,6 +647,12 @@ nav ul li a:hover{
         background-repeat: no-repeat!important;
         background-size: cover!important;
         background-position-x: center!important;
+    }
+    .services::before{
+        background: #fff!important;
+    }
+    .service{
+        width: 45%;
     }
 }
 
