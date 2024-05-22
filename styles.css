@@ -20,11 +20,11 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 150px;
+    height: 13vh!important;
 }
 
 .logo img {
-    width: 120px;
+    height: 13vh;
     margin-left: 20px;
 }
 
