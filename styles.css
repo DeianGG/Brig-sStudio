@@ -25,7 +25,7 @@ header {
 
 .logo img {
     height: 13vh;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .svg-divider {
@@ -732,6 +732,9 @@ nav ul li a:hover{
         display: block;
         top: auto;
         right: 20px;
+    }
+    .logo img{
+        margin-left: 15px!important;
     }
 
     nav ul {
