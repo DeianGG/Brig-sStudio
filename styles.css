@@ -459,6 +459,7 @@ nav ul li a:hover{
     width: 100%;
     height: 50px!important;
     background-color: #ffffff;
+    margin-bottom: 30px;
 }
 .location-svg1{
     width: 50%;
@@ -473,7 +474,7 @@ nav ul li a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 30px;
+    padding: 0px 15px 30px 15px
 }
 
 .map {
