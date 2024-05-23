@@ -116,7 +116,7 @@ nav ul li a:hover{
     text-align: center;
     color: white;
     height: 100vh;
-    background: url('cover1.jpg') no-repeat center center/cover;
+    background: url('cover1.webp') no-repeat center center/cover;
     margin: 0;
     padding: 0;
 }
@@ -748,7 +748,7 @@ nav ul li a:hover{
 /* Responsive Styles */
 @media (max-width: 1160px) {
     .hero{
-        background: url('cover2.jpg')!important;
+        background: url('cover2.webp')!important;
         background-repeat: no-repeat!important;
         background-size: cover!important;
         background-position-x: center!important;
