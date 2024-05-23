@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Playfair Display', serif;
     color: #333;
@@ -153,7 +152,9 @@ nav ul li a:hover{
     border-radius: 15px;
     text-decoration: none;
 }
-
+.hero-content a:hover{
+    background: rgba(230, 192, 69, 0.9);
+}
 .hero-curve {
     position: absolute;
     bottom: -1px;
@@ -612,6 +613,9 @@ nav ul li a:hover{
     justify-content: center;
     align-items: center;
 }
+.contact-number:hover{
+    background: rgba(230, 192, 69, 0.9);
+}
 
 .contact-number a{
     text-decoration: none;
@@ -824,6 +828,12 @@ nav ul li a:hover{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 30px;
+    padding: 30px 40px;
+}
+.content h1{
+    margin-bottom: 40px;
+}
+.terms-content h2{
+    margin-top: 20px;
 }
 
