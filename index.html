@@ -57,8 +57,8 @@
     
     
     <section class="about">
-        <h2>Bine ați venit la</h2>
-        <h1>Brig's Studio Timișoara</h1>
+        <h2 class="animate">Bine ați venit la</h2>
+        <h1 class="animate">Brig's Studio Timișoara</h1>
         <p>Redefinim frumusețea prin detalii fine și servicii de înaltă calitate, pentru a te ajuta să te simți mereu specială și încrezătoare.</p>
         <p>La Brig's Studio Timișoara, misiunea noastră este de a redefini standardele frumuseții și de a oferi o experiență unică fiecărui client. Suntem dedicați să aducem cele mai noi și inovatoare tehnici de înfrumusețare, utilizând produse de înaltă calitate și echipamente de ultimă generație.</p>
         <p>Echipa noastră de profesioniști pasionați și experimentați este aici pentru a te ajuta să te simți și să arăți cât mai bine. Fie că ai nevoie de un tratament facial revigorant, un machiaj impecabil pentru o ocazie specială sau de un coafat perfect, suntem pregătiți să îți oferim servicii personalizate care să îți pună în valoare frumusețea naturală.</p>
@@ -67,11 +67,11 @@
     </section>
     
     <section id="services" class="services">
-        <h1 class="section-title">Servicii</h1>
+        <h1 class="section-title animate">Servicii</h1>
         
         <div class="services-container">
             <div class="left">
-                <div class="service">
+                <div class="service slide-in">
                     <img src="coafura.jpg" alt="Coafor">
                     <div class="service-content">
                         <h3>Coafor</h3>
@@ -134,7 +134,7 @@
         </div>
     </section>
     <section id="gallery" class="gallery">
-        <h1 class="section-title">Galerie</h1>
+        <h1 class="section-title animate">Galerie</h1>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide gallery-item">
@@ -257,8 +257,8 @@
     
     <section id="contact" class="contact">
         <div class="contact-content">
-            <h2>Te așteptăm pe la noi</h2>
-            <h1 class="section-title">Contactează-ne</h1>
+            <h2 class="animate">Te așteptăm pe la noi</h2>
+            <h1 class="section-title animate">Contactează-ne</h1>
             <p>Pentru mai multe informații privind Brig's Studio sau serviciile oferite de acestea,</p>
             <p>vă rugăm să ne contactați telefonic la numărul de mai jos sau să vizitați pagina noastră de Facebook.</p>
             <div class="contact-info">
@@ -273,19 +273,19 @@
         </div>
     </section>
     
-    <section id="location" class="location">
+    <section id="location" class="location animate">
         <div class="location-svg">
             <svg class="location-svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0,0 H0,85 C93,5 99,70 100,100 H100,0 Z" fill="#f8f8f8" />
+                <path d="M0,0 H0,78 C87,5 99,70 100,100 H100,0 Z" fill="#f8f8f8" />
             </svg>
             <svg class="location-svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M100,0 H100,15 C7,5 1,70 0,100 H100,100 " fill="#f8f8f8" />
+                <path d="M100,0 H100,22 C13,5 1,70 0,100 H100,100 Z" fill="#f8f8f8" />
             </svg>
         </div>
         <h1 class="section-title">Unde ne găsești</h1>
         <div class="location-container">
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.9310613989898!2d21.228599269673314!3d45.75667393389076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47456780287d8233%3A0xd553a42394fdbaa3!2sStrada%20Eugeniu%20de%20Savoya%2010%2C%20Timi%C8%99oara!5e0!3m2!1sen!2sro!4v1716403130451!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.9310613989898!2d21.228599269673314!3d45.75667393389076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47456780287d8233%3A0xd553a42394fdbaa3!2sStrada%20Eugeniu%20de%20Savoya%2010%2C%20Timi%C8%99oara!5e0!3m2!1sen!2sro!4v1716403130451!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="address">
                 <p><strong>Adresa noastră:</strong></p>
@@ -387,7 +387,32 @@
             }
         });
     </script>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const observerOptions = {
+            threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5]
+          };
+      
+          const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, observerOptions);
+      
+          const animateElements = document.querySelectorAll('.animate');
+      
+          animateElements.forEach(el => {
+            observer.observe(el);
+          });
+        });
+  </script>
+      
+        
+        
+        
     
     
     

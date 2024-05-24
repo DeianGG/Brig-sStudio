@@ -34,7 +34,8 @@ header {
     position: absolute;
     right: 39.95%;
     height: 100%;
-    width: 100px; /* Adjust width as needed */
+    width: 20%;
+    max-width: 100px;
 }
 
 .svg-divider svg {
@@ -607,7 +608,7 @@ nav ul li a:hover{
 .contact-number {
     width: 160px;
     padding: 10px;
-    background-color: #d4af37; /* Gold color */
+    background-color: #d4af37;
     color: white;
     border-radius: 5px;
     display: flex;
@@ -782,10 +783,10 @@ nav ul li a:hover{
         top: auto;
         right: 20px;
     }
-    .logo img{
-        margin-left: 15px!important;
+    .logo a{
+        margin-left: 15%!important;
     }
-
+    
     nav ul {
         display: none;
     }
@@ -809,6 +810,18 @@ nav ul li a:hover{
         width: 100%;
     }
 
+    .location-svg1 path{
+        display: none!important;
+    }
+    .location-svg1{
+        background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 H0,60 C85,5 99,70 100,100 H100,0 Z" fill="%23f8f8f8" /></svg>') no-repeat;
+    }
+    .location-svg2 path{
+        display: none!important;
+    }
+    .location-svg2{
+        background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 H100,40 C15,5 1,70 0,100 H100,100 Z" fill="%23f8f8f8" /></svg>') no-repeat;
+    }
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -838,3 +851,26 @@ nav ul li a:hover{
     margin-top: 20px;
 }
 
+/* Define keyframes for your animation */
+@keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .animate-in {
+    opacity: 1;
+    animation: fadeInUp 0.5s ease-out; /* Trigger the animation */
+  }
+  
+  
