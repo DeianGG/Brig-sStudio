@@ -47,7 +47,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 40%; /* Adjust width based on logo and divider width */
+    width: 40%;
     background-color: #d4af37;
     height: 100%;
 }
@@ -84,14 +84,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* Gold color */
+    color: #ffffff;
     font-weight: bold;
     font-size: 1.3rem;
 }
 nav ul li a:hover{
     color:#fffbee
 }
-/* Section Title Underline Effect */
+
 .section-title {
     position: relative;
     display: inline-block;
@@ -104,7 +104,7 @@ nav ul li a:hover{
     display: block;
     width: 100%;
     height: 4px;
-    background: #d4af37; /* Gold color */
+    background: #d4af37;
     position: absolute;
     bottom: -10px;
     left: 0;
@@ -187,7 +187,7 @@ nav ul li a:hover{
 }
 
 .about h2 {
-    color: #d4af37; /* Gold color */
+    color: #d4af37;
     margin-bottom: 10px;
 }
 
@@ -207,7 +207,7 @@ nav ul li a:hover{
     position: relative;
     padding: 50px 20px;
     text-align: center;
-    background-color: #fff; /* Background color for the entire section */
+    background-color: #fff;
 }
 
 .services::before {
@@ -327,7 +327,7 @@ nav ul li a:hover{
     overflow: hidden;
     transition: transform 0.6s ease-in-out;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    height: 600px!important; /* Fixed height for all slides */
+    height: 600px!important; 
 }
 
 .swiper-slide img,
@@ -335,7 +335,7 @@ nav ul li a:hover{
     width: 100%;
     height: 100%!important;
     display: block;
-    object-fit: cover; /* Ensures images/videos cover the entire slide without stretching */
+    object-fit: cover; 
 }
 
 .swiper-container {
@@ -345,18 +345,18 @@ nav ul li a:hover{
     overflow: hidden;
 }
 
-/* Adjust Swiper Navigation Buttons */
+
 .swiper-button-next,
 .swiper-button-prev {
-    color: #d4af37!important; /* Gold color */
+    color: #d4af37!important; 
     width: 44px;
     height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 50%; /* Center vertically within the Swiper container */
-    z-index: 10; /* Ensure they are above other elements */
+    top: 50%; 
+    z-index: 10; 
 }
 
 .swiper-button-next::after,
@@ -372,14 +372,14 @@ nav ul li a:hover{
     left: 10px;
 }
 
-/* Adjust Swiper Pagination */
+
 .swiper-pagination {
     position: absolute;
-    bottom: 10px; /* Position at the bottom of the Swiper container */
+    bottom: 10px; 
     left: 0;
     width: 100%;
     text-align: center;
-    z-index: 10; /* Ensure it is above other elements */
+    z-index: 10; 
     transition: .3s opacity;
     transform: translate3d(0, 0, 0);
 }
@@ -389,10 +389,10 @@ nav ul li a:hover{
 }
 
 .swiper-pagination-bullet-active {
-    background: #d4af37!important; /* Gold color */
+    background: #d4af37!important; 
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .swiper-slide {
         height: 250px;
@@ -414,7 +414,7 @@ nav ul li a:hover{
 .contact-content h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #d4af37; /* Gold color */
+    color: #d4af37;
 }
 
 .contact-content h1 {
@@ -450,7 +450,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3b5998; /* Facebook blue */
+    background-color: #3b5998; 
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -525,7 +525,7 @@ nav ul li a:hover{
 }
 
 .address a {
-    color: #d4af37; /* Gold color */
+    color: #d4af37; 
     text-decoration: none;
 }
 
@@ -572,7 +572,7 @@ nav ul li a:hover{
 
 .footer-section h3 {
     font-size: 1.2rem;
-    color: #d4af37; /* Gold color */
+    color: #d4af37;
     margin-bottom: 20px;
 }
 
@@ -632,7 +632,7 @@ nav ul li a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3b5998; /* Facebook blue */
+    background-color: #3b5998;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -654,7 +654,7 @@ nav ul li a:hover{
     justify-content: space-evenly;
     text-align: center;
     padding: 20px;
-    background-color: #d4af37; /* Light pink color */
+    background-color: #d4af37;
     color: #333;
 }
 
@@ -688,7 +688,7 @@ nav ul li a:hover{
 }
 
 .footer-links a:hover {
-    background-color: #d4af37; /* Gold color */
+    background-color: #d4af37;
     color: white;
 }
 
@@ -716,7 +716,7 @@ nav ul li a:hover{
     top: 20px;
     right: 45px;
     font-size: 3rem;
-    color: #d4af37; /* Gold color */
+    color: #d4af37; 
     text-decoration: none;
 }
 
@@ -737,7 +737,7 @@ nav ul li a:hover{
     padding: 8px;
     text-decoration: none;
     font-size: 2rem;
-    color: #d4af37; /* Gold color */
+    color: #d4af37;
     display: block;
     transition: 0.3s;
 }
@@ -851,7 +851,7 @@ nav ul li a:hover{
     margin-top: 20px;
 }
 
-/* Define keyframes for your animation */
+
 @keyframes fadeInUp {
     from {
       transform: translateY(20px);
@@ -864,13 +864,13 @@ nav ul li a:hover{
   }
   
   .animate {
-    opacity: 0; /* Initially hidden */
+    opacity: 0; 
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
   
   .animate-in {
     opacity: 1;
-    animation: fadeInUp 0.5s ease-out; /* Trigger the animation */
+    animation: fadeInUp 0.5s ease-out; 
   }
   
   
